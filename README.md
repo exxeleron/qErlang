@@ -25,6 +25,8 @@ EDoc generated documentation of the API is available [here](http://exxeleron.git
 
 ## Examples
 
-The [`examples`](https://github.com/exxeleron/qErlang-dev/tree/master/examples/tick_subscribe) directory contains an example OTP application with a gen_server subscribing to a KDB+ tick instance for updates.
+The [`examples`](https://github.com/exxeleron/qErlang/tree/master/examples/) directory contains:
+- An OTP application with a gen_server subscribing to a KDB+ tick instance for updates
+- Demonstration of how to use the `peek` API function for message routing based on partial decoding of messages
 
-In qErlang, q types deserialize to Erlang tuples of the form `{<q type>, <data>}`. The [`qErlang_test.erl`](https://github.com/exxeleron/qErlang-dev/blob/master/test/qErlang_test.erl) file in the `test` directory is a useful reference with examples of deserialized q objects of various types.
+In qErlang, q types deserialize to Erlang tuples of the form `{<q type>, <data>}`. The [`qErlang_test.erl`](https://github.com/exxeleron/qErlang/blob/master/test/qErlang_test.erl) file in the `test` directory is a useful reference with examples of deserialized q objects of various types.
