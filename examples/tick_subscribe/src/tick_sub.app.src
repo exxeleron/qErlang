@@ -1,0 +1,12 @@
+{application, tick_sub,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { tick_sub_app, []}},
+  {env, []}
+ ]}.

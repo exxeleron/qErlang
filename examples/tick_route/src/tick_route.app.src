@@ -1,0 +1,12 @@
+{application, tick_route,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { tick_route_app, []}},
+  {env, []}
+ ]}.

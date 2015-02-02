@@ -1,0 +1,14 @@
+{application, qErlang,
+ [
+  {description, "library for interprocess communication between Erlang and Kdb+"},
+  {vsn, "1.0.0"},
+  {modules, [
+             qErlang
+            ]},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {env, []}
+ ]}.
