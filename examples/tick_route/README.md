@@ -2,7 +2,7 @@ tick_route
 ==========
 
 The purpose of this example is to show how the `qErlang:peek` function can be used for routing KDB+ IPC messages based on their contents without full decoding of the whole message.
-In the example the `tick_route` application opens connections to two KDB+ servers listening on ports 5001 and 5002, resp., then starts to listen on port 8000. Every incoming message is partially decoded. Messages that encode a mixed list with the first two elements equal to `upd` and `trade` symbols are forwarded to a KDB+ server listening on port 5001 while messages with the first two elements equal to `upd` and `quote` symbols are forwarded to a KDB+ server listening on port 5002. This way a stream of updates coming to the `tick_route` application is split into two streams routed to two tick instances. 
+In the example the `tick_route` application opens connections to two KDB+ servers listening on ports 5001 and 5002, resp., then starts to listen on port 8000. Every incoming message is partially decoded. Messages that encode a mixed list with the first two elements equal to `upd` and `trade` symbols are forwarded to a KDB+ server listening on port 5001 while messages with the first two elements equal to `upd` and `quote` symbols are forwarded to a KDB+ server listening on port 5002. This way a stream of updates coming to the `tick_route` application is split into two streams routed to two tick instances based on the contents of the message, but without full decoding of the payload data.
 
 The main functionality is implemented in the `handle_cast(session,State)` function in the `tick_route` module. The code is quoted below for easy reference:
 
