@@ -32,3 +32,7 @@ The [`examples`](https://github.com/exxeleron/qErlang/tree/master/examples/) dir
 - Demonstration of how to use the `peek` API function for message routing based on partial decoding of messages
 
 In qErlang, q types deserialize to Erlang tuples of the form `{<q type>, <data>}`. The [`qErlang_test.erl`](https://github.com/exxeleron/qErlang/blob/master/test/qErlang_test.erl) file in the `test` directory is a useful reference with examples of deserialized q objects of various types.
+
+## Limitations
+
+qErlang does not support compressed messages. In practice it means that in most use cases the KDB+ server has to be on the same host as the process using the qErlang module. [KDB+ IPC documentation](http://code.kx.com/q/ref/ipc/) provides information on when  a KDB+ server wil compress an outgoing message.
